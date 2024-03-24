@@ -1,0 +1,754 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+html, body {
+    font-family: "Playfair Display", serif;
+    font-family: 'Times New Roman', serif;
+    top:0px;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    margin: 0 auto;
+    padding:0 15px ;
+   max-width: 1200px;
+   display: sticky;
+   top:0px;
+}
+
+nav {
+    padding: 20px 0;
+    border-bottom: 0.5px solid rgb(255, 255, 255);
+    background-color: rgb(3, 16, 42);
+    color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0px;
+    z-index: 4; 
+}
+
+
+
+.nav-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 10px;
+    flex-wrap: wrap ;
+    display: sticky;
+    top:0px;
+}
+
+.logo{
+    color: #ffffff;
+    font-size: 24px;
+    display: sticky;
+    top:0px;
+}
+.nav-list{
+display: flex;
+align-items: center;
+column-gap: 30px;
+font-size: 16px;
+font-weight: 500;
+display: sticky;
+top:0px;
+}
+
+.nav-list__link{
+color: #ffffff;
+
+}
+.nav-list__link:hover{
+    opacity: 0.8;
+}
+
+.nav-list__link--active{
+position: relative;
+}
+
+.nav-list__link--active::before{
+content: "";
+display: block;
+height: 2px;
+width: 100%;
+background-color: rgb(255, 250, 250);
+position: absolute;
+left: 0;
+top: 100%;
+display: sticky;
+
+}
+
+.header {
+    background-color:  rgb(3, 16, 42);
+    height: 400px;
+    color: rgb(255, 255, 255);
+    min-height: 695px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Set a higher z-index for the header */
+}
+
+.header__wrap{
+padding: 0 15px;
+max-width: 600px;
+
+}
+.header__text{
+margin-bottom: 30px;
+font-size: 30px;
+font-weight: 300;
+line-height: 1.4;
+}
+.header__title{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.logo{
+    width: 75px;
+    height: 25px;
+}
+
+.cripto {
+    padding: 0px;
+    margin: 10px;
+    height: 350px;
+    width: 350px;
+    position: relative;
+    opacity: 0; 
+    
+    animation: fadeIn 1s ease-in-out forwards; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.cripto:hover {
+    transform: rotate(20deg);
+}
+
+.btn {
+    opacity: 1;
+    display: inline-block;
+    height: 48px;
+    padding: 12px 28px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    background-color: #34db63;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-decoration: none; 
+}
+
+@keyframes growGraph1 {
+    0% {
+        height: 0;
+        
+    }
+    100% {
+        height: 100px;
+        
+    }
+}
+
+@keyframes growGraph2 {
+    0% {
+        height: 0;
+        
+    }
+    100% {
+        height: 100px;
+        
+    }
+}
+
+@keyframes growGraph3 {
+    0% {
+        height: 0;
+     
+    }
+    100% {
+        height: 150px;
+      
+    }
+}
+
+@keyframes growGraph4 {
+    0% {
+        height: 0;
+        
+    }
+    100% {
+        height: 180px;
+        
+    }
+}
+
+@keyframes growGraph5 {
+    0% {
+        height: 0;
+       
+    }
+    100% {
+        height: 200px;
+      
+    }
+}
+@keyframes growGraph6 {
+    0% {
+        height: 0;
+       
+    }
+    100% {
+        height: 250px;
+      
+    }
+}
+
+.graphic-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 500px;
+}
+
+.graphic-graphic1 {
+    width: 50px;
+    height: 0;
+    background-color: #34db63;
+    margin: 10px;
+    animation: growGraph1 1s ease-in-out forwards;
+    position: absolute;
+    bottom: 21.5%;
+    left: 75%;
+}
+
+.graphic-graphic2 {
+    width: 50px;
+    height: 0;
+    background-color: #34db63;
+    margin: 10px;
+    animation: growGraph2 1s ease-in-out 1s forwards;
+    position: absolute;
+    bottom: 250px; /* Додано "px" для вказання величини в пікселях */
+    left: 79%;
+}
+
+.graphic-graphic3 {
+    width: 50px;
+    height: 0;
+    background-color: #ff0000;
+    margin: 10px;
+    animation: growGraph3 1s ease-in-out 2s forwards;
+    position: absolute;
+    top: 325px; /* Змінено відстань для наступного графіка */
+    left: 83%;
+}
+
+.graphic-graphic4 {
+    width: 50px;
+    height: 0;
+    background-color: #34db63;
+    margin: 10px;
+    animation: growGraph4 1s ease-in-out 3s forwards;
+    position: absolute;
+    bottom: 200px;
+    left: 87%;
+}
+
+.graphic-graphic5 {
+    width: 50px;
+    height: 0;
+    background-color: #34db63;
+    margin: 10px;
+    animation: growGraph5 1s ease-in-out 4s forwards;
+    position: absolute;
+    bottom: 380px;
+    left: 91%;
+}
+.graphic-graphic6 {
+    width: 50px;
+    height: 0;
+    background-color: #34db63;
+    margin: 10px;
+    animation: growGraph5 1s ease-in-out 5s forwards;
+    position: absolute;
+    bottom: 580px;
+    left: 95%;
+}
+
+
+.main{
+    background-color: rgb(3, 16, 42);
+    margin: 0;
+    padding: 0;
+
+    height: auto;
+   
+}
+
+.main__title{
+    position: relative;
+    bottom: -100px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #ffffff;
+    padding: 0px 50px;
+ 
+
+}
+
+.main__text{
+    bottom: -100px;
+    position: relative;
+    padding: 0 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #ffffff;
+    max-width: 700px;
+    max-height: 400px;
+ 
+  
+}
+
+.main__wrap {
+    position: relative;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    height: auto; 
+    margin-top: 50px;  
+     
+}
+
+.boy {
+    width: 400px;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -250px;
+    left: 800px; 
+    display: flex;
+    margin-top: 20px; /* Додано відступ від верху */
+}
+
+.footer{
+
+background-color:rgb(3, 16, 42); 
+padding: 0px 0 10px;
+color:  rgb(213, 213, 213);
+z-index: 4;
+
+
+
+
+}
+
+.footer__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    color: black;
+
+}
+
+.social{
+display: flex;
+column-gap: 50px;
+align-items: center;
+}
+
+.social__item{
+    width: 50px;
+    margin-top: 10px;
+}
+
+.copyright{
+    font-size: 16px;
+    color: black;
+}
+    
+.copyright p+p{
+margin-top: 0.1em;
+}  
+
+.containr {
+    padding: 2px 16px;
+    background-color: aliceblue;
+
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    flex-wrap: wrap; 
+
+}
+.card {
+    margin: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 300px;
+    height: 300px;
+}
+.main__wrappr {
+    text-align: center; /* Вирівнює текст по центру */
+    color: white; /* Встановлює білий колір тексту */
+    margin-bottom: 50px; /* Відступ знизу, щоб уникнути перекривання футера */
+    margin-top: 50px;
+    max-width: 950px;
+}
+
+.main__tite {
+    font-size: 24px; 
+    margin-bottom: 20px; 
+}
+
+.main__txt {
+    font-size: 18px; 
+    margin-bottom: 20px; 
+}
+
+.main .contai {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.instructions__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+.instruction-card {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding: 0px 0px 30px;
+  
+}
+
+
+.instruction-card__image img {
+    max-width: 90px;
+    max-height: 90px;
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+
+.instruction-card__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1250px) {
+    .graphic-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        
+    }
+    
+    .graphic-graphic1 {
+        width: 30px;
+        height: 0;
+        background-color: #34db63;
+        margin: 10px;
+        animation: growGraph1 1s ease-in-out forwards;
+        position: absolute;
+        bottom: 70%;
+        left: 20%;
+    }
+    
+    .graphic-graphic2 {
+        width: 30px;
+        height: 0;
+        background-color: #34db63;
+        margin: 10px;
+        animation: growGraph2 1s ease-in-out 1s forwards;
+        position: absolute;
+        bottom: 76.5%; /* Додано "px" для вказання величини в пікселях */
+        left: 29%;
+    }
+    
+    .graphic-graphic3 {
+        width: 30px;
+        height: 0;
+        background-color: #ff0000;
+        margin: 10px;
+        animation: growGraph3 1s ease-in-out 2s forwards;
+        position: absolute;
+        top: 6.2%; /* Змінено відстань для наступного графіка */
+        left: 38%;
+    }
+    
+    .graphic-graphic4 {
+        width: 30px;
+        height: 0;
+        background-color: #34db63;
+        margin: 10px;
+        animation: growGraph4 1s ease-in-out 3s forwards;
+        position: absolute;
+        bottom:78%;
+        left: 47%;
+    }
+    
+    .graphic-graphic5 {
+        width: 30px;
+        height: 0;
+        background-color: #34db63;
+        margin: 10px;
+        animation: growGraph5 1s ease-in-out 4s forwards;
+        position: absolute;
+        bottom:84%;
+        left: 56%;
+    }
+    .graphic-graphic6 {
+        width: 30px;
+        height: 0;
+        background-color: #34db63;
+        margin: 10px;
+        animation: growGraph5 1s ease-in-out 5s forwards;
+        position: absolute;
+        bottom: 91.5%;
+        left: 65%;
+    }
+    @keyframes growGraph1 {
+        0% {
+            height: 0;
+            
+        }
+        100% {
+            height: 45px;
+            
+        }
+    }
+    
+    @keyframes growGraph2 {
+        0% {
+            height: 0;
+            
+        }
+        100% {
+            height: 100px;
+            
+        }
+    }
+    
+    @keyframes growGraph3 {
+        0% {
+            height: 0;
+         
+        }
+        100% {
+            height: 90px;
+          
+        }
+    }
+    
+    @keyframes growGraph4 {
+        0% {
+            height: 0;
+            
+        }
+        100% {
+            height: 40px;
+            
+        }
+    }
+    
+    @keyframes growGraph5 {
+        0% {
+            height: 0;
+           
+        }
+        100% {
+            height: 50px;
+          
+        }
+    }
+    @keyframes growGraph6 {
+        0% {
+            height: 0;
+           
+        }
+        100% {
+            height: 50px;
+          
+        }
+    }
+.cripto{
+    top:-30px;
+    height: 200px;
+    width: 200px;
+     left: 45%;
+    position: relative; 
+
+}
+.header__text{
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+    position: relative;
+    display: flex;
+    top: 20px;
+    left:-200px;
+    }
+    .header__title{
+        position: relative;
+        display: flex;
+        top: 20px;
+        left:-200px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 600px;
+        line-height: 1.4;
+    }
+    .btn {
+        position: relative;
+        top: 70px;
+        display: inline-flex;
+        appearance: none;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        user-select: none;
+        right: 55%;
+        opacity: 1;
+        display: block;
+        margin: 0 auto; /* центруємо */
+        height: 50px;
+        width: 155px;
+        padding: 15px 45px;
+        border-radius: 20px;
+        color: rgb(0, 0, 0);
+        background-color: #34db63;
+        letter-spacing: 3px;
+        font-weight: 150;
+        text-decoration: none; 
+    }
+    
+    .header {
+        background-color: rgb(3, 16, 42);
+        color: rgb(255, 255, 255);
+     
+        padding: 0px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1; /* Set a higher z-index for the header */
+    }
+    .boy {
+      display: none;
+    }
+    
+    .main__title{
+        position: relative;
+        top: -5px;
+        font-size: 20px;
+        font-weight: 300;
+        color: #ffffff;
+        padding: 0px 50px;
+    
+    }
+    .main__text{
+        top: -5px;
+        position: relative;
+        padding: 0 50px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.4;
+        color: #ffffff;
+        max-width: 700px;
+       
+
+    }
+    .main__wrapper {
+        position: relative; 
+    }
+    .main {
+        background-color: rgb(3, 16, 42);
+        margin: 0;
+        padding: 0;
+        height: auto;
+        padding-bottom: 50px;
+      
+        position: relative; 
+    }
+    .footer{
+        height: auto;
+        background-color:rgb(3, 16, 42); 
+        padding: 30px 0 20px;
+        color:  rgb(0, 0, 0);
+        z-index: 4;
+    }
+    .card {
+        margin: 5px;
+        transition: 0.3s;
+        width: 200px;
+        height: 250px;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; /* Зміна напрямку на стовпець */
+        align-items: center; /* Центрування елементів по горизонталі */
+    }
+    .main__wrappr {
+        text-align: center; 
+        color: white;
+        margin-bottom: 50px; 
+        margin-top: 50px;
+        max-width: 250px;
+    }
+    
+    .main__tite {
+        font-size: 24px; 
+        margin-bottom: 20px; 
+    }
+    
+    .main__txt {
+        font-size: 18px; 
+        margin-bottom: 20px; 
+    }
+
+}
